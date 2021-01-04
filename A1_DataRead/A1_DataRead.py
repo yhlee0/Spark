@@ -21,11 +21,11 @@ _my.take(1)
 _my = popRddBin.map(lambda x :x[1].decode('euc-kr'))
 
 # COMMAND ----------
-
+# Read by binaryFiles()
 popRddBin = spark.sparkContext.binaryFiles(os.path.join("/FileStore/tables/data","경기도_의정부시_인구현황_20201202.csv"))
 
 # COMMAND ----------
-
+# Read by DataFrame
 popDf = spark\
             .read.option("charset", "euc-kr")\
             .option("header", "true")\
@@ -43,12 +43,12 @@ for i in popRdd.take(5):
 popRdd.take(5)
 
 # COMMAND ----------
-
+# Read by Rdd(1)
 popRdd = spark.sparkContext\
     .textFile(os.path.join("/FileStore/tables/data","경기도_의정부시_인구현황_20201202.csv"), use_unicode=True)
 
 # COMMAND ----------
-
+# CreateSparkSession
 import os
 import pyspark
 
