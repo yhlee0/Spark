@@ -6,7 +6,7 @@
 
 # 2. Tobe
 * add data files
-* Read by Rdd, binary, binaryFiles, DataFrame
+* Read by Rdd, DataFrame
 
 
 # 3. Guideline
