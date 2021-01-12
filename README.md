@@ -12,6 +12,8 @@ spark cloud(databricks) 이용한다.
 * add data files
 * Read by Rdd, binary, binaryFiles, DataFrame
 
+___
+
 # 1. B1_DataRead
 * Create RDD and Read
 * Create DataFrame and Read
